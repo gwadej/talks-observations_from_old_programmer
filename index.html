@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Observations from an Old Maintenance Programmer</title>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20160417" />
+<meta name="author" content="G. Wade Johnson" />
+<meta name="company" content="CoverMyMeds" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/local/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/local/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<style type="text/css">
+    .centered { text-align: center; }
+    .left { float: left; }
+    .right { float: right; }
+    h1 + blockquote, h1 + q { margin-top: 2em; }
+    td, th {
+        border: 1px solid black; text-align: right;
+        padding-left: 1ex; padding-right: 0.5ex;
+    }
+    .synAlert { color: #0000ff; }
+    .synBaseN { color: #007f00; }
+    .synBString { color: #c9a7ff; }
+    .synChar { color: #ff00ff; }
+    .synComment { color: #7f7f7f; font-style: italic; }
+    .synDataType { color:#0000ff; }
+    .synDecVal { color:#00007f; }
+    .synError { color:#ff0000; font-style: italic; font-weight: bold; }
+    .synFloat { color:#00007f; }
+    .synFunction { color:#007f00; }
+    .synIString { color:#ff0000; }
+    .synKeyword { font-weight: bold; }
+    .synOperator { color:#ffa500; }
+    .synOthers { color:#b03060; }
+    .synRegionMarker { color:#96b9ff; font-style: italic; }
+    .synReserved { color:#9b30ff; font-weight: bold; }
+    .synString { color:#ff0000\; }
+    .synVariable { color:#0000ff; font-weight: bold; }
+    .synWarning { color:#0000ff; font-style: italic; font-weight: bold; }
+ </style>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>CoverMyMeds</h1>
+<h2>June 17, 2016</h2>
+</div>
+
+</div>
+
+<div class="presentation">
+
+<div class="slide">
+<h1>Observations from an Old Maintenance Programmer</h1>
+<h2></h2>
+<h3>G. Wade Johnson</h3>
+</div>
+
+<div class="slide">
+<h1>Who Am I?</h1>
+<p class="centered">Professional programmer for over 25 years. Notable features of my
+career.</p>
+<ul class="interactive">
+    <li>Programmed professionally in 8 different langauges</li>
+    <li>Worked as a programmer in 9 different industries</li>
+    <li>Wrote code to run on 5 different operating systems</li>
+    <li>Worked in companies ranging in size from 4 to 200k people</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Common Themes</h1>
+<ul>
+    <li>Everyone is too busy</li>
+    <li>Finding good developers is hard</li>
+    <li>Customers can be unreasonable</li>
+    <li> - but without them we would be broke</li>
+    <li>The next new thing will disrupt everything</li>
+    <li>We're the ones solving really hard problems</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Legacy Code - The Belief</h1>
+<ul>
+    <li>The legacy system is a disaster we should rewrite/replace it</li>
+    <li>The new/hot language/paradigm/methodology/silver bullet will fix it all.</li>
+    <li>The previous developers didn't know what they were doing.</li>
+    <li>We could do a much better job.</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Legacy Code - The Reality</h1>
+<ul>
+    <li>The legacy system pays our paychecks.</li>
+    <li>A lot of the cruft on a legacy system is scar tissue from lessons learned.</li>
+    <li>There isn't any silver bullet. (Read the Mythical Man-Month until you get this)</li>
+    <li>The previous developers did the best job possible with the knowledge and skills they had at the time.</li>
+    <li>Our knowledge is still imperfect and we probably won't do a 10x better job.</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Rewriting Code</h1>
+<ul class="incremental">
+    <li>A complete from the ground re-write is a horrible idea.</li>
+    <li>Sometimes (less often than you think), it's still the right thing to do.</li>
+    <li>Small improvements add up</li>
+    <li>When you remove cruft, make sure you know why it is there.</li>
+    <li>Don''t break a working system for a theoretical improvement</li>
+    <li>Sometimes you have to make it worse to get better</li>
+    <li>If a piece of code is ugly, unreadable, no one know how it works, but it doesn't fail, leave it alone.</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Most Important Engineering Principle</h1>
+<p class="centered">Good Enough</p>
+<p class="centered">Sometimes invoked recently as <abbr title="You Aren't Gonna Need It">YAGNI</abbr></p>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Programmers Are Rational People</h1>
+<p class="centered">Yeah. Right.</p>
+<p>We don't like to admit that we make irrational decisions based on emotion.
+But it's true.</p>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>(Programmer) Religion</h1>
+<p>There is no one, true way.</p>
+<ul>
+    <li>Not language</li>
+    <li>Not paradigm</li>
+    <li>Not brace/indenting style</li>
+    <li>Not editor</li>
+    <li>Different things work for different people</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Langauge Doesn't Really Matter</h1>
+<p>That's a lie. But not as big a lie as you think.</p>
+
+<ul class="incremental">
+    <li><q>A bad programmer can write Fortran in any languuage.</q></li>
+    <li>A good developer can write good code in almost any language.</li>
+    <li>All general purpose programming languages are Turing-Complete.</li>
+    <li>Languages differ in what they make easy and in the community/philosophy around them.</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>What's Important?</h1>
+<p>What is the most important thing we get from writing code?</p>
+
+<ul class="incremental">
+    <li>Revenue?</li>
+    <li>Customers?</li>
+    <li>Software?</li>
+    <li>Knowledge</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Know Your Tools</h1>
+<ul>
+    <li>Language</li>
+    <li>Compiler/Interpreter</li>
+    <li>Libraries</li>
+    <li>Editor/IDE</li>
+    <li>Version Control</li>
+    <li>Tooling: CI, static analyzers, etc.</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Process</h1>
+<ul>
+    <li>Processes suck</li>
+    <li>Processes are vital to be productive</li>
+    <li>Good process won't fix a bad developer</li>
+    <li>Bad process can chase off a good developer</li>
+    <li><q>The formal process should not prevent the informal process from
+        working.</q></li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Pitfalls</h1>
+<ul>
+    <li>The senior people have experience. Pay attention to them</li>
+    <li>The junior people ask stupid questions. Pay attention to them</li>
+    <li>Never ask <q>Why would anyone do that?</q> about customer input</li>
+    <li>Software always has bugs</li>
+    <li>Despite best intentions, we will mmake mistakes.</li>
+    <li>Risk analysis is important.</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Constants</h1>
+<ul>
+    <li>The technology and industry changes enough that sometimes old truisms no longer apply.</li>
+    <li>Fundamentals always matter</li>
+    <li>It's hard to bolt on security</li>
+    <li>It's impossible to bolt on quality</li>
+    <li>Validate input</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Our Business is Different</h1>
+<p>Used to justify not adopting a best practice: version control, unit tests,
+coding standards, training, etc.</p>
+<ul>
+    <li><q>It might work for others, but the problems we work on are harder.</q></li>
+    <li><q>We have really good people, we don't need that</q></li>
+    <li><q>That's fine for academics, but we have a businness to run</q></li>
+    <li><q>We don't have time to change.</q></li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Always Be Learning</h1>
+<ul>
+    <li>If you aren't learning, you are falling behind</li>
+    <li>The best programmers I know have spent a lot of free time working on code<ul>
+        <li>Most of that never saw the light of day.</li>
+    </ul></li>
+    <li>Study new lannguages, paradigms, programming problems, puzzles</li>
+    <li>Learn things outside your field</li>
+    <li>Read</li>
+    <li>Don't experiment (much) in production code</li>
+    <li>Practice fundamentals</li>
+    <li>Teach, give talks</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+
+
+<div class="slide">
+<h1>Industries I've Worked In</h1>
+<ul>
+    <li>Medical Research</li>
+    <li><abbr title="Interactive Voice Response">IVR</abbr> for mortgage companies</li>
+    <li>Personal investing information</li>
+    <li>Energy management systems</li>
+    <li>Software configuration management system</li>
+    <li>Investment banking</li>
+    <li>Geoscience</li>
+    <li>Web hosting</li>
+    <li>Electronic prior authorizations</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Langauges I've Used Professionally</h1>
+<ul>
+    <li>Fortran</li>
+    <li>C</li>
+    <li>Forth</li>
+    <li>JavaScript (pre-jQuery)</li>
+    <li>Java</li>
+    <li>C++</li>
+    <li>Perl</li>
+    <li>Ruby</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Education</h1>
+<ul>
+    <li>I've seen no strong correlation between programming ability and formal CS education</li>
+    <li>All of the best programmers I've seen are always learning</li>
+    <li>Good mix: seasoned developers, solid intermediate developers, junior developers</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+
+
+</body>
+</html>
