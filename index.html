@@ -77,7 +77,7 @@
 <p class="centered">Professional programmer for over 25 years. Notable features of my
 career.</p>
 <ul class="interactive">
-    <li>Programmed professionally in 8 different langauges</li>
+    <li>Programmed professionally in 8 different languages</li>
     <li>Worked as a programmer in 9 different industries</li>
     <li>Wrote code to run on 5 different operating systems</li>
     <li>Worked in companies ranging in size from 4 to 200k people</li>
@@ -88,14 +88,14 @@ career.</p>
 </div>
 
 <div class="slide">
-<h1>Common Themes</h1>
+<h1>Our Business is Different</h1>
+<p>Used to justify not adopting a best practice: version control, unit tests,
+coding standards, training, etc.</p>
 <ul>
-    <li>Everyone is too busy</li>
-    <li>Finding good developers is hard</li>
-    <li>Customers can be unreasonable</li>
-    <li> - but without them we would be broke</li>
-    <li>The next new thing will disrupt everything</li>
-    <li>We're the ones solving really hard problems</li>
+    <li><q>It might work for others, but the problems we work on are harder.</q></li>
+    <li><q>We have really good people, we don't need that</q></li>
+    <li><q>That's fine for academics, but we have a business to run</q></li>
+    <li><q>We don't have time to change.</q></li>
 </ul>
 <div class="handout">
     notes
@@ -105,8 +105,8 @@ career.</p>
 <div class="slide">
 <h1>Legacy Code - The Belief</h1>
 <ul>
-    <li>The legacy system is a disaster we should rewrite/replace it</li>
-    <li>The new/hot language/paradigm/methodology/silver bullet will fix it all.</li>
+    <li>The legacy system is a disaster we should rewrite/replace it.</li>
+    <li>The hot <em>{silver bullet}</em> will fix it all.</li>
     <li>The previous developers didn't know what they were doing.</li>
     <li>We could do a much better job.</li>
 </ul>
@@ -120,8 +120,10 @@ career.</p>
 <ul>
     <li>The legacy system pays our paychecks.</li>
     <li>A lot of the cruft on a legacy system is scar tissue from lessons learned.</li>
-    <li>There isn't any silver bullet. (Read the Mythical Man-Month until you get this)</li>
-    <li>The previous developers did the best job possible with the knowledge and skills they had at the time.</li>
+    <li>There's no silver bullet.<ul>
+        <li>(Read the <cite>Mythical Man-Month</cite> until you get this)</li>
+    </ul></li>
+    <li>The previous developers did the best job possible with the knowledge and resources they had at the time.</li>
     <li>Our knowledge is still imperfect and we probably won't do a 10x better job.</li>
 </ul>
 <div class="handout">
@@ -130,15 +132,12 @@ career.</p>
 </div>
 
 <div class="slide">
-<h1>Rewriting Code</h1>
-<ul class="incremental">
-    <li>A complete from the ground re-write is a horrible idea.</li>
-    <li>Sometimes (less often than you think), it's still the right thing to do.</li>
-    <li>Small improvements add up</li>
-    <li>When you remove cruft, make sure you know why it is there.</li>
-    <li>Don''t break a working system for a theoretical improvement</li>
-    <li>Sometimes you have to make it worse to get better</li>
-    <li>If a piece of code is ugly, unreadable, no one know how it works, but it doesn't fail, leave it alone.</li>
+<h1>Legacy Code - <q>Bad Design?</q></h1>
+<ul>
+    <li>When you start building a project, you know the least about it you ever will.</li>
+    <li>Any decisions you make early on are based on flawed information.</li>
+    <li>Even good decisions can be overwhelmed by changes in environment.</li>
+    <li>In hindsight, many reasonable decisions look like bad ones.</li>
 </ul>
 <div class="handout">
     notes
@@ -146,19 +145,29 @@ career.</p>
 </div>
 
 <div class="slide">
-<h1>Most Important Engineering Principle</h1>
-<p class="centered">Good Enough</p>
-<p class="centered">Sometimes invoked recently as <abbr title="You Aren't Gonna Need It">YAGNI</abbr></p>
+<h1>Good Design</h1>
+<ul>
+    <li>In the future, some of your great decisions will look naive.</li>
+    <li>There is no one, true way to develop software.</li>
+    <li>Every design is based on a series of sub-optimal trade-offs.</li>
+    <li>A good design has attributes you want, with downsides you can live with.</li>
+    <li>A good design is a study in careful trade-offs.</li>
+</ul>
 <div class="handout">
     notes
 </div>
 </div>
 
 <div class="slide">
-<h1>Programmers Are Rational People</h1>
-<p class="centered">Yeah. Right.</p>
-<p>We don't like to admit that we make irrational decisions based on emotion.
-But it's true.</p>
+<h1>What's Important?</h1>
+<p>What is the most important thing we get from writing code?</p>
+
+<ul>
+    <li>Revenue?</li>
+    <li>Customers?</li>
+    <li>Software?</li>
+    <li>Knowledge</li>
+</ul>
 <div class="handout">
     notes
 </div>
@@ -180,29 +189,16 @@ But it's true.</p>
 </div>
 
 <div class="slide">
-<h1>Langauge Doesn't Really Matter</h1>
+<h1>Language Doesn't Really Matter</h1>
 <p>That's a lie. But not as big a lie as you think.</p>
 
-<ul class="incremental">
+<ul>
     <li><q>A bad programmer can write Fortran in any languuage.</q></li>
-    <li>A good developer can write good code in almost any language.</li>
+    <li>A good programmer can write good code in almost any language.</li>
     <li>All general purpose programming languages are Turing-Complete.</li>
-    <li>Languages differ in what they make easy and in the community/philosophy around them.</li>
-</ul>
-<div class="handout">
-    notes
-</div>
-</div>
-
-<div class="slide">
-<h1>What's Important?</h1>
-<p>What is the most important thing we get from writing code?</p>
-
-<ul class="incremental">
-    <li>Revenue?</li>
-    <li>Customers?</li>
-    <li>Software?</li>
-    <li>Knowledge</li>
+    <li>Languages differ in what they make easy.</li>
+    <li>Languages differ in the community/philosophy around them.</li>
+    <li>Other languages look ugly because you don't understand them, yet.</li>
 </ul>
 <div class="handout">
     notes
@@ -242,10 +238,10 @@ But it's true.</p>
 <div class="slide">
 <h1>Pitfalls</h1>
 <ul>
-    <li>The senior people have experience. Pay attention to them</li>
-    <li>The junior people ask stupid questions. Pay attention to them</li>
-    <li>Never ask <q>Why would anyone do that?</q> about customer input</li>
-    <li>Software always has bugs</li>
+    <li>The senior people have experience. Pay attention to them.</li>
+    <li>The junior people ask stupid questions. Pay attention to them.</li>
+    <li>Never ask <q>Why would anyone do that?</q> about customer input.</li>
+    <li>Software always has bugs.</li>
     <li>Despite best intentions, we will mmake mistakes.</li>
     <li>Risk analysis is important.</li>
 </ul>
@@ -255,54 +251,64 @@ But it's true.</p>
 </div>
 
 <div class="slide">
-<h1>Constants</h1>
-<ul>
-    <li>The technology and industry changes enough that sometimes old truisms no longer apply.</li>
-    <li>Fundamentals always matter</li>
-    <li>It's hard to bolt on security</li>
-    <li>It's impossible to bolt on quality</li>
-    <li>Validate input</li>
-</ul>
-<div class="handout">
-    notes
-</div>
-</div>
-
-<div class="slide">
-<h1>Our Business is Different</h1>
-<p>Used to justify not adopting a best practice: version control, unit tests,
-coding standards, training, etc.</p>
-<ul>
-    <li><q>It might work for others, but the problems we work on are harder.</q></li>
-    <li><q>We have really good people, we don't need that</q></li>
-    <li><q>That's fine for academics, but we have a businness to run</q></li>
-    <li><q>We don't have time to change.</q></li>
-</ul>
-<div class="handout">
-    notes
-</div>
-</div>
-
-<div class="slide">
 <h1>Always Be Learning</h1>
 <ul>
-    <li>If you aren't learning, you are falling behind</li>
-    <li>The best programmers I know have spent a lot of free time working on code<ul>
+    <li>If you aren't learning, you are falling behind.</li>
+    <li>The best programmers I know have spent a lot of free time working on code.<ul>
         <li>Most of that never saw the light of day.</li>
     </ul></li>
-    <li>Study new lannguages, paradigms, programming problems, puzzles</li>
-    <li>Learn things outside your field</li>
+    <li>Study new languages, paradigms, programming problems, puzzles.</li>
+    <li>Learn things outside your field.</li>
     <li>Read</li>
-    <li>Don't experiment (much) in production code</li>
-    <li>Practice fundamentals</li>
-    <li>Teach, give talks</li>
+    <li>Don't experiment (much) in production code.</li>
+    <li>Practice fundamentals.</li>
+    <li>Teach, give talks.</li>
 </ul>
 <div class="handout">
     notes
 </div>
 </div>
 
+<div class="slide">
+<h1>Most Important Engineering Principle</h1>
+<p class="centered">Good Enough</p>
+<p class="centered">Sometimes invoked recently as <abbr title="You Aren't Gonna Need It">YAGNI</abbr></p>
+<div class="handout">
+    notes
+</div>
+</div>
 
+<div class="slide">
+<h1>Rewriting Code</h1>
+<ul class="incremental">
+    <li>A complete from the ground re-write is a horrible idea.</li>
+    <li>Sometimes (less often than you think), it's still the right thing to do.</li>
+    <li>Small improvements add up</li>
+    <li>When you remove cruft, make sure you know why it is there.</li>
+    <li>Don't break a working system for a theoretical improvement</li>
+    <li>Sometimes you have to make it worse to get better</li>
+    <li>If a piece of code is ugly, unreadable, no one know how it works, but it doesn't fail, leave it alone.</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Constants</h1>
+<ul>
+    <li>The technology and industry changes.<ul>
+        <li>Sometimes old truisms no longer apply.</li>
+    </ul></li>
+    <li>Fundamentals always matter.</li>
+    <li>It's hard to bolt on security.</li>
+    <li>It's impossible to bolt on quality.</li>
+    <li>Validate all input.</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
 
 <div class="slide">
 <h1>Industries I've Worked In</h1>
@@ -323,7 +329,7 @@ coding standards, training, etc.</p>
 </div>
 
 <div class="slide">
-<h1>Langauges I've Used Professionally</h1>
+<h1>Languages I've Used Professionally</h1>
 <ul>
     <li>Fortran</li>
     <li>C</li>
@@ -340,11 +346,38 @@ coding standards, training, etc.</p>
 </div>
 
 <div class="slide">
+<h1>Operating Systems</h1>
+<ul>
+    <li>MS DOS</li>
+    <li>Windows</li>
+    <li>Windows NT</li>
+    <li>Solaris</li>
+    <li>Linux</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
 <h1>Education</h1>
 <ul>
     <li>I've seen no strong correlation between programming ability and formal CS education</li>
     <li>All of the best programmers I've seen are always learning</li>
     <li>Good mix: seasoned developers, solid intermediate developers, junior developers</li>
+</ul>
+<div class="handout">
+    notes
+</div>
+</div>
+
+<div class="slide">
+<h1>Common Themes</h1>
+<ul>
+    <li>Everyone is too busy</li>
+    <li>Finding good developers is hard</li>
+    <li>The next new thing will disrupt everything</li>
+    <li>We're the ones solving really hard problems</li>
 </ul>
 <div class="handout">
     notes
